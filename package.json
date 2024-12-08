@@ -1,0 +1,21 @@
+{
+  "name": "bwd-labs",
+  "version": "1.0.0",
+  "description": "��$\u0004\u0018\u0004\u001e\u0004:\u0000\u001a\u00040\u0004@\u00040\u0004C\u0004;\u0004>\u00042\u0004 \u0000\u001c\u00040\u0004:\u0004A\u00048\u0004<\u0004 \u0000!\u00045\u0004@\u00043\u00045\u00045\u00042\u00048\u0004G\u0004\\\u0000n\u0000\u0013\u0004@\u0004C\u0004?\u0004?\u00040\u0004:\u0000 \u0000\u001f\u0004@\u0004\u0018\u0004-\u00002\u00002\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
