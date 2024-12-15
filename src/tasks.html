@@ -13,6 +13,42 @@
     />
     <script defer ="defer" src="scripts/burger.js"></script>
     <link rel="icon" href="images/favicon-32x32.ico" type="Image/x-icon" />
+    <style>
+        .task-item {
+            background: #f5f5f5;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        
+        .table-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .main-title {
+            margin: 0;
+        }
+
+        .controls-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .right-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -45,7 +81,16 @@
       <div class="container">
         <div class="table-info">
           <h1 class="main-title">Задачи</h1>
-          <button id="open-dialog-btn" class="button">Добавить задачу</button>
+          <div class="controls-container">
+            <div class="left-controls">
+              <button id="open-dialog-btn" class="button">Добавить задачу</button>
+            </div>
+            <div class="right-controls">
+              <button onclick="exportTasks()" class="button">Экспорт в CSV</button>
+              <input type="file" id="importFile" accept=".csv" style="display: none;" onchange="importTasks(event)">
+              <button onclick="document.getElementById('importFile').click()" class="button">Импорт из CSV</button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="container">
@@ -86,5 +131,6 @@
     </dialog>
     <script defer src="scripts/modal.js"></script>
     <script defer src="bundle.js"></script>   
+    <script src="scripts/import-export.js"></script>
   </body>
 </html>

@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const checkbox = taskItem.querySelector("input[type='checkbox']");
     checkbox.addEventListener("change", () => handleTaskStatusChange(task, status));
 
-    // Обработчик удаления задачи
+    // Обработчик удале��ия задачи
     const deleteBtn = taskItem.querySelector(".delete-btn");
     deleteBtn.addEventListener("click", () => handleTaskDelete(task, status));
 
@@ -189,4 +189,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Первоначальный рендер задач
   renderTasks();
+});
+
+window.addEventListener('tasksUpdated', function() {
+    renderTasks(); // Вызываем функцию renderTasks при обновлении задач
 });

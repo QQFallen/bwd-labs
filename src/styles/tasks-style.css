@@ -190,16 +190,22 @@ body {
   background-color: #f3f3f3;
   border-radius: 8px;
   align-items: flex-start; /* Карточки не растягиваются по высоте */
+  max-width: 1200px; /* Увеличиваем, если нужно */
+  margin: 0 auto;
 }
 .task-column {
   max-height: 500px; /* Лимит высоты для колонок */
   overflow-y: auto; /* Добавляем прокрутку */
   width: 100%; /* Убираем фиксированную ширину, делаем колонку адаптивной */
-  max-width: 300px; /* Ограничиваем максимальную ширину */
+  max-width: 350px; /* Ограничиваем максимальную ширину */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 10px; /* Расстояние между задачами */
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
 }
 
 .task-column h2 {
@@ -233,7 +239,7 @@ body {
 
 .task-item .task-text {
   flex-grow: 1; /* Текст занимает оставшееся пространство */
-  word-wrap: break-word; /* Перенос длинных слов */
+  word-wrap: break-word; /* Перенос длинных сл��в */
   overflow-wrap: break-word; /* Совместимость с другими браузерами */
   white-space: normal; /* Разрешаем перенос текста */
   margin: 0; /* Убираем лишние отступы */
